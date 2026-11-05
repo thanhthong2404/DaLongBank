@@ -73,10 +73,7 @@ fun PromotionScreen() {
                 },
                 showTitle = true,
                 showBackButton = selectedPromotion != null,
-                showCallButton = false,
-                onBackClick = {
-                    selectedPromotion = null
-                }
+                showCallButton = true,
             )
         },
         containerColor = Color(0xFFF5F7FA)

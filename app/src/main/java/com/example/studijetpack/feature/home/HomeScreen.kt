@@ -28,7 +28,6 @@ fun HomeScreen(
                 showTitle = true,
                 showBackButton = false,
                 showCallButton = true,
-                onCallClick = onCallClick
             )
         }
     ) { innerPadding ->

@@ -109,8 +109,6 @@ fun TransactionScreen(
                 showTitle = true,
                 showBackButton = false,
                 showCallButton = true,
-                onBackClick = onBackClick,
-                onCallClick = onCallClick
             )
         }
     ) { innerPadding ->
