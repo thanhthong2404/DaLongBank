@@ -3,7 +3,6 @@ package com.example.studijetpack.feature.account
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Fingerprint
@@ -53,12 +52,19 @@ fun AccountScreen(
                     title = "THÔNG TIN CÁ NHÂN",
                     menus = AccountSampleData.profileMenus,
                     onMenuClick = { menu ->
-                        if (menu.type == AccountMenuType.BANK_ACCOUNTS) {
-                            onMenuClick(menu.type)
-                            selectedMenu = menu
-                        } else {
-                            onMenuClick(menu.type)
-                            selectedMenu = menu
+                        when (menu.type) {
+                            AccountMenuType.PROFILE -> {
+                                onMenuClick(menu.type)
+                                print("onMenuClick(menu.type) ${menu.type}")
+                            }
+
+                            AccountMenuType.BANK_ACCOUNTS -> {
+                                selectedMenu = menu
+                            }
+
+                            else -> {
+                                selectedMenu = menu
+                            }
                         }
                     }
                 )

@@ -52,7 +52,8 @@ fun PromotionBanner(
             state = pagerState,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(178.dp)
+                .height(178.dp),
+            pageSpacing = 12.dp
         ) { page ->
             val banner = banners[page]
 

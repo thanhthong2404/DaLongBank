@@ -72,9 +72,9 @@ fun LoginScreen(
             .background(
                 Brush.verticalGradient(
                     colors = listOf(
-                        Color(0xFF0F2027),
-                        Color(0xFF203A43),
-                        Color(0xFF2C5364)
+                        Color(0xFF2563EB),
+                        Color(0xFF3B82F6),
+                        Color(0xFF60A5FA)
                     )
                 )
             ),
@@ -195,7 +195,11 @@ fun LoginScreen(
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Checkbox(
                             checked = uiState.rememberMe,
-                            onCheckedChange = onRememberMeChange
+                            onCheckedChange = onRememberMeChange,
+                            colors = CheckboxDefaults.colors(
+                                checkedColor = Color(0xFF2563EB),
+                                checkmarkColor = Color.White
+                            )
                         )
                         Text(text = "Ghi nhớ", fontSize = 13.sp, color = Color.DarkGray)
                     }

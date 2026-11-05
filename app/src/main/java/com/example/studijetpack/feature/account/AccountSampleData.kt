@@ -14,7 +14,7 @@ import androidx.compose.material.icons.filled.Policy
 object AccountSampleData {
 
     val user = AccountUser(
-        fullName = "Nguyễn Văn An",
+        fullName = "Võ Thành Thông",
         customerId = "DL000123",
         phone = "098****123",
         email = "an***@gmail.com",
@@ -25,14 +25,14 @@ object AccountSampleData {
         BankAccount(
             bankName = "Vietcombank",
             accountNumber = "**** **** 8291",
-            accountHolder = "NGUYEN VAN AN",
+            accountHolder = "VO THANH THONG",
             bankLogoText = "VCB",
             isDefault = true
         ),
         BankAccount(
             bankName = "BIDV",
             accountNumber = "**** **** 5628",
-            accountHolder = "NGUYEN VAN AN",
+            accountHolder = "VO THANH THONG",
             bankLogoText = "BIDV",
             isDefault = false
         )

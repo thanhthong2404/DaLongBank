@@ -42,7 +42,7 @@ fun HomeScreen(
                 AccountOverview(
                     balance = "125.680.000",
                     accountNumber = "8291",
-                    accountName = "NGUYỄN VĂN A"
+                    accountName = "VÕ THÀNH THÔNG"
                 )
             }
 

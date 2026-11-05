@@ -10,4 +10,5 @@ object AppRoute {
     const val TRANSACTION = "TRANSACTION"
     const val PROMOTION = "PROMOTION"
     const val ACCOUNT = "ACCOUNT"
+    const val PROFILE = "PROFILE"
 }

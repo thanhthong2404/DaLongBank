@@ -12,7 +12,9 @@
     import androidx.navigation.compose.currentBackStackEntryAsState
     import androidx.navigation.compose.rememberNavController
     import com.example.studijetpack.core.component.BaseBottomBar
+    import com.example.studijetpack.feature.account.AccountMenuType
     import com.example.studijetpack.feature.account.AccountScreen
+    import com.example.studijetpack.feature.account.profile.ProfileScreen
     import com.example.studijetpack.feature.home.HomeScreen
     import com.example.studijetpack.feature.promotion.PromotionScreen
     import com.example.studijetpack.feature.transaction.TransactionScreen
@@ -73,6 +75,16 @@
                 composable(AppRoute.PROMOTION) {
                     PromotionScreen()
                 }
+                composable(AppRoute.PROFILE) {
+                    ProfileScreen(
+                        onBack = {
+                            navController.popBackStack()
+                        },
+                        onEdit = { field ->
+                            // TODO: Xử lý chỉnh sửa thông tin
+                        }
+                    )
+                }
 
                 composable(AppRoute.ACCOUNT) {
                     AccountScreen(
@@ -82,6 +94,17 @@
                                     inclusive = true
                                 }
                                 launchSingleTop = true
+                            }
+                        },
+                        onMenuClick = { type ->
+                            when (type) {
+                                AccountMenuType.PROFILE -> {
+                                    navController.navigate(AppRoute.PROFILE)
+                                }
+
+                                else -> {
+                                    // Xử lý các chức năng khác
+                                }
                             }
                         }
                     )
